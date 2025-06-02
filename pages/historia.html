@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A beleza de The Legend of Zelda: Breath of the Wild</title>
+  <link rel="icon" type="image/png" href="../imagens/TriforceLogoV2.png">
+  <link rel="stylesheet" href="../css/css.css">
+  <link rel="stylesheet" href="../plugins/bxslider.css">
+  <link rel="stylesheet" href="../plugins/bxslider.min.js">
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="../plugins/magnific-popup.js"></script>
+</head>
+
+<body id="pag-historia">
+  <header id="headerLogo">
+    <a href="../index.html">
+      <img src="../imagens/AlmostWhiteBotwLogo.png" alt="Logo do site The Legend of Zelda: Breath of the Wild">
+    </a>
+    <nav id="menu-paginas" class="ativo">
+      <ul>
+        <li><a href="personagens.html">Personagens</a></li>
+        <li><a href="regioes.html">Regiões</a></li>
+        <li><a href="trailers.html">Trailers</a></li>
+        <li><a href="https://www.nintendo.com/pt-br/store/products/the-legend-of-zelda-breath-of-the-wild-switch/" target="_blank" rel="noopener noreferrer">Site Oficial</a></li>
+        <li><a href="sobremim.html">Sobre Mim</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="imagensFundos">
+      <div class="container">
+        <ul class="bxslider">
+          <li><img src="../imagensFundos/AllVsGanon.png" alt="Todos os personagens contra Ganon"></li>
+          <li><img src="../imagensFundos/LinkXGanon.jpg" alt="Link enfrentando Ganon"></li>
+          <li><img src="../imagensFundos/ZeldaUsingTriforce.jpg" alt="Zelda usando o poder da Triforce"></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Este site foi desenvolvido pelo aluno Gabriel Dantas Magalhães de Queiroz durante os seus estudos no primeiro período da disciplina "Introdução à Tecnologia Web".
+      <br>Paulo Afonso - Bahia - Brasil
+    </p>
+  </footer>
+
+  
+  <script>
+  $(document).ready(function () {
+    $('.bxslider').bxSlider({
+      mode: 'horizontal',
+      captions: true,
+      slideWidth: 1000,
+      adaptiveHeight: true,
+      responsive: true,
+      auto: true,
+      pause: 4000,
+      speed: 800,
+      controls: true,
+      autoControls: false
+    });
+
+    $('#fotos #galeria').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      closeOnContentClick: false,
+      closeBtnInside: false,
+      mainClass: 'mfp-with-zoom mfp-img-mobile',
+      image: {
+        verticalFit: true
+      },
+      gallery: {
+        enabled: true
+      },
+      zoom: {
+        enabled: true,
+        duration: 300,
+        opener: function (element) {
+          return element.find('img');
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
